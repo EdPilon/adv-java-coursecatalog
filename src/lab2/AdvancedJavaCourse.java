@@ -8,7 +8,7 @@ import javax.swing.*;
  * @author your name goes here
  * @version 1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse implements ProgrammingCourseInterface{
 
     private String courseName;
     private String courseNumber;

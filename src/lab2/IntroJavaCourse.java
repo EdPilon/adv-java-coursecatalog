@@ -6,7 +6,7 @@ package lab2;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroJavaCourse {
+public class IntroJavaCourse implements ProgrammingCourseInterface{
 
     String courseName;
     private String courseNumber;
@@ -16,6 +16,15 @@ public class IntroJavaCourse {
     public IntroJavaCourse(String courseName, String courseNumber) {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     public String getCourseNumber() {

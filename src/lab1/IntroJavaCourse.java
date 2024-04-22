@@ -6,45 +6,23 @@ package lab1;
  * @author your name goes here
  * @version 1.00
  */
-public class IntroJavaCourse {
-
-    String courseName;
+public class IntroJavaCourse extends ProgrammingCourses {
     double credits;
-    String prerequisites;
-    private String courseNumber;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-    }
-
-    public String getCourseNumber() {
-        return courseNumber;
-    }
-
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }
-
-    public double getCredits() {
-        return credits;
+    public IntroJavaCourse(String courseName, String courseNumber, String prerequisites, double credits) {
+        super(courseNumber, courseName, prerequisites);
+        this.credits = credits;
     }
 
     public void setCredits(double credits) {
         if (credits < 0 || credits > 5.0) {
             System.out.println(
-                    "Error: credits must be in the range 0.5 to 4.0");
+                    "Error: credits must be in the range 0 to 5.0");
             System.exit(0);
         }
-        this.setCredits(credits);
+        this.credits = credits;
     }
-
-    public String getPrerequisites() {
-        return prerequisites;
+    public double getCredits() {
+        return credits;
     }
-
-    public void setPrerequisites(String prerequisites) {
-        this.prerequisites = prerequisites;
-    }
-
 }
